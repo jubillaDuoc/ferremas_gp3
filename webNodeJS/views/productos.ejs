@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Productos</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 id="titlePag" class="display-6"></h1>
+                <table class="table" ;>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Producto</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">SubTipo</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Precio (CLP)</th>
+                            <th scope="col">Precio (USD)</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado-tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/productos.js"></script>
+    </body>
+</html>

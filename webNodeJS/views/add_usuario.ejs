@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edicion de Usuarios</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 class="display-6">Agregar Usuario</h1>
+                <table class="table">
+                    <tbody id="resultado-tabla">
+                        <tr>
+                            <th scope="row">idUser</th>
+                            <td id="idUser"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Username (email)</th>
+                            <td>
+                                <input type="text" id="userName" class="form-control" placeholder="Username (email)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre</th>
+                            <td>
+                                <input type="text" id="userRealName" class="form-control" placeholder="Nombre Personal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rol Usuario</th>
+                            <td>
+                                <select name="userRolSelect" id="userRol" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Estado del Usuario</th>
+                            <td>
+                                <select name="userStateSelect" id="userState" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ingrese Contraseña</th>
+                            <td>
+                                <input type="password" id="firstNewPasswd" class="form-control" placeholder="Ingrese Contraseña">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Repita la Contraseña</th>
+                            <td>
+                                <input type="password" id="secondNewPasswd" class="form-control" placeholder="Repita la Contraseña">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="btnSaveUser" class="btn btn-success" onclick="send_data_user()">Guardar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/add_usuario.js"></script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ferremas</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <table class="table" ;>
+                    <tbody id="resultado-tabla">
+                        <tr>
+                            <th scope="row">idProducto</th>
+                            <td id="idProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre del Producto</th>
+                            <td id="nombreProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Marca</th>
+                            <td id="nombreMarcaProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tipo del producto</th>
+                            <td id="nombreTipoProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sub tipo del producto</th>
+                            <td id="nombreSubtipoProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Precio del producto (CLP)</th>
+                            <td id="precioCLPProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Precio del producto (USD)</th>
+                            <td id="precioUSDProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stock</th>
+                            <td id="stockProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Accion</th>
+                            <td id="accionProducto"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/detalle_producto.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edicion de Pedidos</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h2 class="display-5">Detalle de pedido</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="btnReloadPedido" class="btn btn-secondary" onclick="reloadPedido()">Recargar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table">
+                    <tbody id="resultado-tabla">
+                        <tr>
+                            <th scope="row">idPedido</th>
+                            <td id="idPedido"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Estado del Pedido</th>
+                            <td>
+                                <select name="estadoSelect" id="nombreEstadoPedido" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Usuario</th>
+                            <td id="userMail"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre Usuario</th>
+                            <td id="userName"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rol Usuario</th>
+                            <td id="userRol"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Estado Usuario</th>
+                            <td id="userState"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td id="totalPedido"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h2 class="display-6">Detalle de productos del pedido</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productos-tabla">
+                    </tbody>
+                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="btnVaciarCarrito" class="btn btn-danger" onclick="vaciarCarritoBoton()">Vaciar Pedido</button>
+                        </div>
+                        <div class="col-md-5">
+                            <button id="btnSaveCarrito" class="btn btn-success" onclick="save_newState()">Guardar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/edit_pedido.js"></script>
+    </body>
+</html>

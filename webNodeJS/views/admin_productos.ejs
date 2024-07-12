@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin de productos</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 id="titlePag" class="display-6">Administración de Productos</h1>
+                <a id="addProducto" class="btn btn-primary" href="/add_producto">Agregar Producto</a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre Producto (detalle)</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">SubTipo</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado-tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/admin_productos.js"></script>
+    </body>
+</html>

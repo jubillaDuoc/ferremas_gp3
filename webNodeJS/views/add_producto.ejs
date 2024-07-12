@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edicion de Productos</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 class="display-6">Agregar Producto</h1>
+                <table class="table">
+                    <tbody id="resultado-tabla">
+                        <tr>
+                            <th scope="row">idProducto</th>
+                            <td id="idProducto"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre del Producto</th>
+                            <td id="nombreProducto">
+                                <input type="text" id="nombreProductoInput" class="form-control" placeholder="Nombre del producto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Marca</th>
+                            <td>
+                                <select name="marcaSelect" id="nombreMarcaProducto" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tipo del producto</th>
+                            <td>
+                                <select name="tipoSelect" id="nombreTipoProducto" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sub tipo del producto</th>
+                            <td>
+                                <select name="subtipoSelect" id="nombreSubtipoProducto" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Precio del producto</th>
+                            <td id="precioProducto">
+                                <input type="text" id="precioProductoInput" class="form-control" placeholder="Precio del producto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stock</th>
+                            <td id="stockProducto">
+                                <input type="text" id="stockProductoInput" class="form-control" placeholder="Stock del producto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Accion</th>
+                            <td id="accionProducto"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/add_producto.js"></script>
+    </body>
+</html>

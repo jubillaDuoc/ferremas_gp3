@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edicion de Usuarios</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <table class="table">
+                    <tbody id="resultado-tabla">
+                        <tr>
+                            <th scope="row">idUser</th>
+                            <td id="idUser"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Username (email)</th>
+                            <td>
+                                <input type="text" id="userName" class="form-control" placeholder="Username (email)" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nombre</th>
+                            <td>
+                                <input type="text" id="userRealName" class="form-control" placeholder="Nombre Personal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rol Usuario</th>
+                            <td>
+                                <select name="userRolSelect" id="userRol" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Estado del Usuario</th>
+                            <td>
+                                <select name="userStateSelect" id="userState" class="form-control"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <input class="form-check-input" type="checkbox" value="" id="editPass" onclick="checkEditPass()">
+                                <label class="form-check-label" for="editPass">
+                                    ¿Modificar Contraseña?
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ingrese nueva Contraseña</th>
+                            <td>
+                                <input type="text" id="firstNewPasswd" class="form-control" placeholder="Ingrese nueva Contraseña" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Repita la nueva Contraseña</th>
+                            <td>
+                                <input type="text" id="secondNewPasswd" class="form-control" placeholder="Repita la nueva Contraseña" disabled>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="btnSaveUser" class="btn btn-success" onclick="send_data_user()">Guardar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/edit_usuario.js"></script>
+    </body>
+</html>

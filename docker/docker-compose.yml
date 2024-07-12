@@ -1,0 +1,28 @@
+# Use postgres/posql123 user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: ${CONTAINER_POSTGRES}
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - 5432:5432
+    networks:
+      - apiferremas-labs
+    volumes:
+      - apiferremas-db:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+    networks:
+      - apiferremas-labs
+
+volumes:
+  apiferremas-db:
+    driver: local
+
+networks:
+  apiferremas-labs:
+    driver: bridge

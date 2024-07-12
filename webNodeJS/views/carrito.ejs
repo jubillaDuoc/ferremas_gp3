@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carrito</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 id="titlePag" class="display-6">Carrito de compras</h1>
+
+                <table class="table">
+                    <tbody id="detalle-tabla">
+                        <tr>
+                            <th scope="row">idPedido</th>
+                            <td id="idPedido"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total pedido (CLP)</th>
+                            <td id="totalPedidoCLP"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total pedido (USD)</th>
+                            <td id="totalPedidoUSD"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio (CLP)</th>
+                            <th scope="col">Precio (USD)</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="producto-tabla">
+                    </tbody>
+                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="btnVaciarCarrito" class="btn btn-danger" onclick="vaciarCarritoBoton()">Vaciar Carrito</button>
+                        </div>
+                        <div class="col-md-5">
+                            <button id="btnSaveCarrito" class="btn btn-primary" onclick="guardarCarritoBoton()">Recargar Carrito</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="btnRealizarCompra" class="btn btn-success">Realizar Compra</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/carrito.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin de pedidos</title>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/headers') %>
+        <div class="container">
+            <div class="container-fluid p-4">
+                <h1 id="titlePag" class="display-6">Administración de pedidos</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Estado Pedido</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Rol Usuario</th>
+                            <th scope="col">Estado Usuario</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado-tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <%- include('partials/scripts') %>
+        <script src="/js/admin_pedidos.js"></script>
+    </body>
+</html>
